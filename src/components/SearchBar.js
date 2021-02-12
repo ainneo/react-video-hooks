@@ -1,31 +1,32 @@
 import React, { useState } from 'react';
 
 const SearchBar = ({ onFormSubmit }) => {
-
-  const [input, setInput] = useState('');
+  const [term, setTerm] = useState('');
 
   const onSubmit = (event) => {
     event.preventDefault();
-    onFormSubmit(input);
+
+    onFormSubmit(term);
   };
 
   return (
     <div className="search-bar ui segment">
-      <form className="ui form">
+      <form onSubmit={onSubmit} className="ui form">
         <div className="field">
           <label>Video Search</label>
           <input
-            onSubmit={onSubmit} //event handeler
-            type="text"  // defines a one-line text input field
-            value={input} // value="" - our search vaule
-            onChange={(event) => setInput(event.target.value)} //update the state
+            type="text"
+            value={term}
+            onChange={(event) => setTerm(event.target.value)}
           />
         </div>
       </form>
     </div>
   );
 };
+
 export default SearchBar;
+
 
 //1. state - input values
 
