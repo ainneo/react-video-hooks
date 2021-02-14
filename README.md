@@ -25,7 +25,10 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### For Styling - used semantic UI
+### Styling - Semantic UI
 https://semantic-ui.com/
 https://semantic-ui.com/collections/grid.html#grids
+
+
+### Notes: Need to create/update api keys
 
